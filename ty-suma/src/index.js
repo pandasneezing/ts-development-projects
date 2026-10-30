@@ -28,9 +28,12 @@ function getLast(items) {
 }
 const last = getLast(["My meloddy", "Rilakkuma", "Hello Kitty", "Capibara", "Pikachu"]);
 console.log(`El último elemento del array es ${last}`);
+console.log("ROSARIO FUENTES GARCIA");
 const updatedPinata = {
-    name: "Rilakkuma Pinata",
-    stock: 4,
-    price: 450,
+    name: "Stick Piñata 45 cm",
+    stock: 40,
+    price: 45,
+    colors: ["blue", "red", "purple"],
 };
+console.log(`El ${updatedPinata.name} tiene disponibiliad de ${updatedPinata.stock}, con precio de ${updatedPinata.price} cada, con colores de ${updatedPinata.colors}`);
 //# sourceMappingURL=index.js.map
