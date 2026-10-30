@@ -28,4 +28,9 @@ function getLast(items) {
 }
 const last = getLast(["My meloddy", "Rilakkuma", "Hello Kitty", "Capibara", "Pikachu"]);
 console.log(`El último elemento del array es ${last}`);
+const updatedPinata = {
+    name: "Rilakkuma Pinata",
+    stock: 4,
+    price: 450,
+};
 //# sourceMappingURL=index.js.map
