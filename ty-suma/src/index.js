@@ -36,4 +36,24 @@ const updatedPinata = {
     colors: ["blue", "red", "purple"],
 };
 console.log(`El ${updatedPinata.name} tiene disponibiliad de ${updatedPinata.stock}, con precio de ${updatedPinata.price} cada, con colores de ${updatedPinata.colors}`);
+// ahora pinata inventory tiene unicamente name, stock y available.
+const inventoryItem = { name: "Piñata Pastel", stock: 5, available: true };
+console.log(`Datos de inventory item ${inventoryItem.name}, ${inventoryItem.stock}, ${inventoryItem.available}`);
+const productoVenta = {
+    name: "Piñata pastel boda",
+    available: true,
+    price: 950,
+};
+console.log(productoVenta);
+const prices = {
+    small: 180,
+    medium: 360,
+    large: 560,
+};
+console.log(`Configured prices for sizes are small ${prices.small}, medium: ${prices.medium}, large: ${prices.large}`);
+const inventario = {
+    cakePinata: 14,
+    numbers: 20,
+};
+console.log(`Inventario de cake piñaatas: ${inventario.cakePinata} y de numeros ${inventario.numbers} y de Christmas lights de ${inventario.christmasLight}`);
 //# sourceMappingURL=index.js.map

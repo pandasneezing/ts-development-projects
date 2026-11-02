@@ -66,3 +66,54 @@ const updatedPinata: Partial< Stick> = {
 };
 
 console.log(`El ${updatedPinata.name} tiene disponibiliad de ${updatedPinata.stock}, con precio de ${updatedPinata.price} cada, con colores de ${updatedPinata.colors}`);
+
+interface ProductoPinata {
+   name: string;
+   price: number;
+   stock: number;
+   available: boolean;
+   size : number;
+}
+
+type PinataInventory = Pick <ProductoPinata, "name" | "stock" | "available">;
+// ahora pinata inventory tiene unicamente name, stock y available.
+const inventoryItem : PinataInventory = {name: "Piñata Pastel",stock : 5, available: true};
+
+console.log(`Datos de inventory item ${inventoryItem.name}, ${inventoryItem.stock}, ${inventoryItem.available}`)
+
+type PinataVenta = Omit<ProductoPinata, "stock" | "size">;
+
+const productoVenta : PinataVenta = {
+   name: "Piñata pastel boda",
+   available: true,
+   price: 950,
+}
+console.log(productoVenta);
+
+// ====== TIPO RECORD =======
+
+type Sizes = "small"| "medium"| "large";
+
+type sizePrice = Record<Sizes, number>;
+
+const prices: sizePrice = {
+   small: 180,
+   medium: 360,
+   large: 560,
+}
+
+console.log(`Configured prices for sizes are small ${prices.small}, medium: ${prices.medium}, large: ${prices.large}`)
+//===== Objeto que almacene el stock disponible de las categorías
+
+type Category = "cakePinata" | "numbers" | "christmasLight";
+
+type InventarioCategorias = Record <Category, number>;
+
+const inventario: InventarioCategorias = {
+   cakePinata: 14,
+   numbers: 20,
+   christmasLight: 12,
+   
+}
+
+console.log(`Inventario de cake piñaatas: ${inventario.cakePinata} y de numeros ${inventario.numbers} y de Christmas lights de ${inventario.christmasLight}`);
