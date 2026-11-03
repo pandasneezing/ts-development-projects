@@ -1,0 +1,10 @@
+# Dependencias
+node_modules/
+
+# Archivos generados por TypeScript
+*.js
+*.js.map
+*.d.ts
+*.d.ts.map
+
+#cambios de gitigore
