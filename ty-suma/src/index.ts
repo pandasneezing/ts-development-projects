@@ -112,8 +112,7 @@ type InventarioCategorias = Record <Category, number>;
 const inventario: InventarioCategorias = {
    cakePinata: 14,
    numbers: 20,
-   christmasLight: 12,
-   
+   christmasLight: 12,   
 }
 
 console.log(`Inventario de cake piñaatas: ${inventario.cakePinata} y de numeros ${inventario.numbers} y de Christmas lights de ${inventario.christmasLight}`);

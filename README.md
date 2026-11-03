@@ -30,3 +30,4 @@ My goal here is nor only to learn Typescript syntax, but also to understand how 
 Asynchronous programming
 
 Practical projects
+Cambio realizado desde Ubuntu para probar el flujo Git.
