@@ -218,3 +218,15 @@ const validCake: ObjectTypeCake = {
 console.log(
   `El producto de cake resultante es ${validCake.id}, ${validCake.name}, mide ${validCake.size} cm`,
 );
+
+//Parameters <T> permite obtener el tipo de los parámetros que recibe una función
+//creo una función para registrar mi producto de tipo piñata
+
+function createProduct(name: string, price: number, stock: number) {
+  return { name, price, stock };
+}
+// ahora quiero obtener el tipo de sus parámetros de name, price, stock
+type ProductPams = Parameters<typeof createProduct>;
+// creamos una tupla con esos parametros
+const productParams: ProductPams = ["Piñata Kuromi", 450, 4];
+console.log(`Mi tupla resultante fue ${productParams}`);
