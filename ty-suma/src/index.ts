@@ -166,3 +166,55 @@ let sizeA: AvailableSizeKitty;
 sizeA = "small";
 
 console.log(`El tamaño permitido para las piñatas de Hello Kitty es ${sizeA}`);
+
+type Sections =
+  | "piñatas"
+  | "numbers"
+  | "garlands"
+  | "christmas lights"
+  | "candies";
+
+type Home = Extract<Sections, "garlands" | "christmas lights">;
+
+const cat: Home = "christmas lights";
+
+console.log(`Esto es una categoría de Home y es ${cat}`);
+
+//NonNullable<T>
+
+type ProductDescription = string | undefined | null;
+
+type ValidDescription = NonNullable<ProductDescription>;
+
+const pinataDescription: ValidDescription =
+  "This beautiful piñata its all you want for christmas";
+
+console.log(`Piñata description ${pinataDescription}`);
+
+/// ReturnType<T> permite obtener automàticamente el tipo de dato que devuelve una función
+//hago una simple función que devuelve un objeto, porque Ts puede inferir que esta función devuelve un objeto con tres propiedades
+
+function getProductInformation() {
+  return {
+    id: 101,
+    name: "Piñata birthday cake",
+    price: 450,
+    available: true,
+    category: "cakes",
+    size: 56,
+  };
+}
+
+type ObjectTypeCake = ReturnType<typeof getProductInformation>;
+
+const validCake: ObjectTypeCake = {
+  id: 104,
+  name: "Wedding pink cake",
+  price: 450,
+  available: true,
+  category: "cakes",
+  size: 14,
+};
+console.log(
+  `El producto de cake resultante es ${validCake.id}, ${validCake.name}, mide ${validCake.size} cm`,
+);
